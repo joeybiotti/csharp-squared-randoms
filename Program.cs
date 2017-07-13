@@ -8,7 +8,23 @@ namespace random
         static void Main(string[] args)
         {
             Random random = new Random();
-            Console.WriteLine(random.Next(1, 50));
+
+            List <double> randomNum = new List <double>();
+            
+            for( var j = 0; j < 20; j++)
+            {
+                randomNum.Add(random.Next(1, 50));
+            }
+            
+            Console.WriteLine("\nTwenty Rando Numbers\n");
+            
+            foreach(double num in randomNum)
+            {
+                Console.WriteLine(num);
+            }
+
+
+        
         }
     }
 }
